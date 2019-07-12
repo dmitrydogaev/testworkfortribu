@@ -1,0 +1,24 @@
+<div style="text-align:center">
+  <h1>
+    Welcome to <span class="title">Testing Project</span>!
+  </h1>
+  <h3>To Login choose your role and enter your credentials</h3>
+
+  <form class="example-form">
+    <div class="example-full-width">
+      <select-component label="Select role" [data]="roles" [control]="form.get('id')"></select-component>
+    </div>
+
+    <div class="example-full-width">
+      <input-component type="email" placeholder="some.user@email.com" label="Your email" [control]="form.get('email')"></input-component>
+    </div>
+  
+    <div class="example-full-width">
+      <input-component type="password" placeholder="qwerty123" label="Your password" [control]="form.get('password')"></input-component>
+    </div>
+
+    <h3 class="error-text" *ngIf="errorMessage">{{errorMessage}}</h3>
+
+    <button-component (pressed)="startLogin()" text="Login" [disabled]="!form.valid" [loading]="loading"></button-component>
+  </form>
+</div>

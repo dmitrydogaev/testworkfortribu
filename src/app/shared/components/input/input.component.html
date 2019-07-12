@@ -1,0 +1,7 @@
+
+<div class="input-container">
+  <label for="input" class="text-label">{{label}}</label>
+  <input class="input" #input type="{{type}}" placeholder="{{placeholder}}" [disabled]="isDisabled()" [ngClass]="{'disabled' :isDisabled(), 'error': !hasError() }"(keyup)="change(input.value)"/>
+
+  <span class="error-message" *ngIf="!hasError()" >{{getErrorMsg()}}</span>
+</div>

@@ -1,0 +1,16 @@
+
+<div class="select-container">
+  <label for="select"class="text-label" >{{label}}</label>
+
+  <div class="loader" *ngIf="!data">
+    <img src="https://i.gifer.com/H0bj.gif">
+  </div>
+
+  <select class="select" #select [disabled]="isDisabled() || !data" [ngClass]="{'disabled': isDisabled() || !data, 'error': hasError()}" (change)="change(select.value)">
+    <option *ngFor="let item of data" [value]="item.id">{{item.role}}</option>
+  </select>
+
+  <span *ngIf="hasEmptyError()" class="error-message">Роль не выбрана</span>
+  <span *ngIf="hasValidityError()" class="error-message">Роль имеет недопустимые параметры для входа</span>
+  <span *ngIf="hasError() && !hasEmptyError() && !hasValidityError()" class="error-message">{{getAnotherErrorText()}}</span>
+</div>

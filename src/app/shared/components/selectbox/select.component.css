@@ -1,0 +1,47 @@
+.select-container{
+    /* padding: 10px; */
+    width: 100%;
+}
+
+.select {
+    background-color: #f8f8f8;
+    border: 1px solid greenyellow;
+    border-radius: 20px;
+    margin: 5px;
+    padding: 10px;
+    outline: none;
+    font-size: 14px;
+    width: 100%;
+}
+
+.text-label{
+    text-align: left;
+    float: left;
+    margin-left: 15px;
+    color: grey;
+}
+
+.disabled {
+    border: 1px solid grey;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+.loader {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    z-index: 2;
+    float: left;
+}
+
+.loader img{
+    width: 20px;
+    height: 20px;
+}
+
+.error-message{
+    color: red;
+}
